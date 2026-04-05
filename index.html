@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster | Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">Code<span class="highlight">Master</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" data-route="home" class="active">Home</a></li>
+            <li><a href="#" data-route="courses">Courses</a></li>
+            <li><a href="#" data-route="practice">Practice</a></li>
+            <li><a href="#" data-route="games">Games</a></li>
+            <li><a href="#" data-route="projects">Projects</a></li>
+            <li><a href="#" data-route="leaderboard">Leaderboard</a></li>
+            <li><a href="#" data-route="dashboard" class="dashboard-link">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" title="Toggle Theme" class="icon-btn">🌓</button>
+            <button class="btn btn-primary" id="login-btn" data-route="login">Login / Sign Up</button>
+        </div>
+    </nav>
+
+    <main id="app-content">
+        <!-- Content injected here by router -->
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
