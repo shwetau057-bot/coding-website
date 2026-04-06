@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background: #111;
+            color: white;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Code Memory Game</h1>
+    <p>Match the code with language</p>
+
+    <div class="grid">
+        <div class="card" onclick="check('html')">&lt;h1&gt;</div>
+        <div class="card" onclick="check('python')">print()</div>
+        <div class="card" onclick="check('css')">color:</div>
+        <div class="card" onclick="check('wrong')">Java</div>
+    </div>
+
+    <h2 id="result"></h2>
+    <h3>Score: <span id="score">0</span></h3>
+
+    <script>
+        let score = 0;
+
+        function check(answer) {
+            if(answer === 'html' || answer === 'python' || answer === 'css') {
+                document.getElementById("result").innerHTML = "Correct Match!";
+                score += 10;
+            } else {
+                document.getElementById("result").innerHTML = "Wrong Match!";
+            }
+            document.getElementById("score").innerHTML = score;
+        }
+    </script>
+
+</body>
+</html>
